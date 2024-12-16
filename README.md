@@ -2,7 +2,8 @@
 
 1. 在任意 linux 系统上安装 docker, 在 ubuntu 中为:
    ```sh
-   sudo wget -qO- https://get.docker.com/ | bash
+   curl -fsSL https://get.docker.com -o get-docker.sh
+   sudo sh get-docker.sh
    sudo groupadd docker
    sudo usermod -aG docker $USER
    newgrp docker
