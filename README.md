@@ -2,6 +2,7 @@
 
 1. 在任意 linux 系统上安装 docker, 在 ubuntu 中为:
    ```sh
+   sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
    curl -fsSL https://get.docker.com -o get-docker.sh
    sudo sh get-docker.sh
    sudo groupadd docker
