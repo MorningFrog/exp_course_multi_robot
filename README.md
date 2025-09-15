@@ -45,7 +45,7 @@ echo "source /<path to workspace>/devel/setup.bash" >> ~/.bashrc
 > `/<path to workspace>` 表示工程文件夹所在的路径
 
 ## 打开多机器人Gazebo仿真平台
-```
+```sh
 roslaunch gazebo_swarm_robot_tb3 gazebo_swarm_robot_5.launch
 ```
 
@@ -57,6 +57,17 @@ rosrun gazebo_swarm_robot_tb3 gazebo_swarm_robot_control_angle
 或
 ```sh
 rosrun gazebo_swarm_robot_tb3 gazebo_swarm_robot_control_angle.py
+```
+若C++文件可运行，而python文件运行出现错误
+```sh
+[rosrun] Couldn't find executable named gazebo_swarm_robot_control_angle.py below /workspaces/mr_ws/src/gazebo_swarm_robot_pkgs/gazebo_swarm_robot_tb3
+[rosrun] Found the following, but they're either not files,
+[rosrun] or not executable:
+[rosrun]   /workspaces/mr_ws/src/gazebo_swarm_robot_pkgs/gazebo_swarm_robot_tb3/scripts/gazebo_swarm_robot_control_angle.py
+```
+尝试为文件添加可执行权限
+```sh
+chmod +x /workspaces/mr_ws/src/gazebo_swarm_robot_pkgs/gazebo_swarm_robot_tb3/scripts/gazebo_swarm_robot_control_angle.py
 ```
 
 **速度一致性**
