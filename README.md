@@ -10,18 +10,19 @@
    newgrp docker
    ```
    需要重启或注销并重新登录当前用户.
-2. 拉取 `ros:noetic` 镜像
+3. 拉取 `ros:noetic` 镜像
    ```sh
    docker pull ros:noetic
    ```
-3. 在 VSCode 中打开 `mr_ws` 工程(如果工程文件夹名称不一样， 需要修改为 `mr_ws`!!!)
+   由于docker官方服务器被墙了，如果这里如果出现“connection reset by peer”报错，可以手动设置一下docker的代理。具体见https://github.com/dongyubin/DockerHub
+4. 在 VSCode 中打开 `mr_ws` 工程(如果工程文件夹名称不一样， 需要修改为 `mr_ws`!!!)
    ```sh
    cd mr_ws
    code .
    ```
-4. 在 VSCode 中安装 `Dev Containers` 扩展
-5. 按 `Ctrl+Shift+P` 打开命令面板, 搜索并选择 `Dev Containers: Rebuild and Reopen in Containers`
-6. 等待完成即可
+5. 在 VSCode 中安装 `Dev Containers` 扩展
+6. 按 `Ctrl+Shift+P` 打开命令面板, 搜索并选择 `Dev Containers: Rebuild and Reopen in Containers`
+7. 等待完成即可
 
 # 角度,位置一致性协议
 
